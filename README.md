@@ -58,7 +58,8 @@ Spring Cloud章节的配套代码，如有疑问，请移步至该地址。
 | microservice-provider-user               | 8000 | 服务提供者                  | /1              |
 |                                          |      |                        |                 |
 
-
+java -jar microservice-provider-user-0.0.1-SNAPSHOT.jar --server.port=8001
+java -jar microservice-consumer-movie-feign-0.0.1-SNAPSHOT.jar --server.port=8001
 
 
 

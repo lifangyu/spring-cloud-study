@@ -22,29 +22,28 @@ logging:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://discovery:8761/eureka/    # 指定注册中心的地址
+      defaultZone: http://discovery:8761/eureka/ # 指定注册中心的地址
   instance:
     preferIpAddress: true
-
-   #心跳时间 和 等待心跳时间 - 必须有
-  instance:
-    leaseRenewalIntervalInSeconds: 5
-    leaseExpirationDurationInSeconds: 30
-    preferIpAddress: true
-  client:
-    healthcheck.enabled: true
-    # 请求超时时间设置 - 必须有
-hystrix:
-  command:
-    default:
-     execution:
-       isolation:
-        thread:
-          timeoutInMilliseconds: 30000
-  threadpool:
-    default:
-      coreSize: 50
-      maxQueueSize: 100
+#   #心跳时间 和 等待心跳时间 - 必须有
+#  instance:
+#    leaseRenewalIntervalInSeconds: 5
+#    leaseExpirationDurationInSeconds: 30
+#    preferIpAddress: true
+#  client:
+#    healthcheck.enabled: true
+#    # 请求超时时间设置 - 必须有
+#hystrix:
+#  command:
+#    default:
+#     execution:
+#       isolation:
+#        thread:
+#          timeoutInMilliseconds: 30000
+#  threadpool:
+#    default:
+#      coreSize: 50
+#      maxQueueSize: 100
 
 #   #心跳时间 和 等待心跳时间 - 必须有
 #   eureka.instance.leaseRenewalIntervalInSeconds = 5
